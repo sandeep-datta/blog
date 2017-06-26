@@ -39,7 +39,7 @@ $j = j^{th}$ output neuron
 $n=$ total number of output neurons.  
 $q=$ total number of inputs for each output neuron  
 $y_{j,\mu}=$ expected value of the $j^{th}$ neuron for the $\mu^{th}$ input record  
-$\hat{y_{j,\mu}}=$ current (calculated) value of the $j^{th}$ neuron for the $\mu^{th}$ input record  
+$\hat{y}_{j,\mu}=$ current (calculated) value of the $j^{th}$ neuron for the $\mu^{th}$ input record  
 $h_{j,\mu}=$ value of the $h$ for the $j^{th}$ neuron for the $\mu^{th}$ input record  
 $w_{j,i} =$ the weight between the $j^{th}$ output neuron and the $i^{th}$ input (to that neuron).  
 $x_{i, \mu}=$ the $i^{th}$ input in the $\mu^{th}$ input record  
@@ -103,15 +103,31 @@ $$
 \sum_{j=1}^{n}
 2 \cdot 
 (y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})) \cdot 
-\frac{\partial f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}\\=
+\frac{\partial f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
+$$
+
+Now using chain rule again ...
+
+$$=
 \frac{1}{2mn}  
 \sum_{\mu=1}^{m} 
 \sum_{j=1}^{n}
-2 \cdot (y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})) \cdot \sum_{i=1}^{q} \frac{\partial f( w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
+2 \cdot 
+(y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})) \cdot 
+f'(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}) \cdot
+\frac{\partial (\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
 $$
 
-##### Using chain rule again
-
+$$=
+\frac{1}{2mn}  
+\sum_{\mu=1}^{m} 
+\sum_{j=1}^{n}
+2 \cdot 
+(y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})) \cdot 
+f'(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}) \cdot
+\sum_{i=1}^{q}
+\frac{\partial (w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
+$$
 
 
 
