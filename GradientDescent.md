@@ -49,7 +49,7 @@ $x_{i, \mu}=$ the $i^{th}$ input in the $\mu^{th}$ input record
 #### Restating the MSE() formula in terms of the weights
 
 * Since inputs and their corresponding outputs are fixed in the training phase the only thing that can change are the weights.
-	* Hence MSE can now be viewed as a function of all the weights.
+	* Hence MSE can now be viewed as a function of (all) weights.
 
 $$
 C(\vec{W}) = MSE(w_{1,1}, w_{1,2}, ..., w_{1,m}, w_{2,1}, w_{2,2}, ..., w_{2,m},  ..., w_{n,m})=\\\frac{1}{2mn} \sum_{\mu=1}^{m} \sum_{j=1}^{n}(y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}))^{2}
@@ -86,7 +86,8 @@ $$
 \right )}{\partial w_{a,b}}
 $$
 
-$$=
+$$
+\frac{\partial C(\vec{W})}{\partial w_{a,b}}=
 \frac{1}{2mn}  
 \sum_{\mu=1}^{m} 
 \sum_{j=1}^{n}
@@ -106,23 +107,22 @@ $$
 \frac{\partial f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
 $$
 
-Using chain rule again ...
+Using chain rule again (and canceling $\frac{1}{2}$ and $2$)...
 
-$$=
-\frac{1}{2mn}  
+$$
+\frac{\partial C(\vec{W})}{\partial w_{a,b}}=
+\frac{1}{mn}  
 \sum_{\mu=1}^{m} 
 \sum_{j=1}^{n}
-2 \cdot 
 (y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})) \cdot 
 f'(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}) \cdot
 \frac{\partial (\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
 $$
 
 $$=
-\frac{1}{2mn}  
+\frac{1}{mn}  
 \sum_{\mu=1}^{m} 
 \sum_{j=1}^{n}
-2 \cdot 
 (y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})) \cdot 
 f'(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}) \cdot
 \sum_{i=1}^{q}
@@ -131,11 +131,11 @@ $$
 
 Since $$h_{j,\mu} = \sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}$$ we have ...
 
-$$=
-\frac{1}{2mn}  
+$$
+\frac{\partial C(\vec{W})}{\partial w_{a,b}}=
+\frac{1}{mn}  
 \sum_{\mu=1}^{m} 
 \sum_{j=1}^{n}
-2 \cdot 
 (y_{j,\mu} - f(h_{j,\mu} )) \cdot 
 f'(h_{j,\mu}) \cdot
 \sum_{i=1}^{q}
@@ -146,8 +146,19 @@ Simplifying the last summation ...
 $$
 \sum_{i=1}^{q}
 \frac{\partial (w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}=
-x_{i, \mu}
+x_{b, \mu}
 $$
 
 Since for all $j \neq a$ and $i \neq b$ the partial differentiation in the above equation is zero.
 
+Therefore...
+
+$$
+\frac{\partial C(\vec{W})}{\partial w_{a,b}}=
+\frac{1}{mn}  
+\sum_{\mu=1}^{m} 
+\sum_{j=1}^{n}
+(y_{j,\mu} - f(h_{j,\mu} )) \cdot 
+f'(h_{j,\mu}) \cdot
+x_{b, \mu}
+$$
