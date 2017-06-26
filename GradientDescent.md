@@ -40,7 +40,7 @@ $n=$ total number of output neurons.
 $q=$ total number of inputs for each output neuron  
 $y_{j,\mu}=$ expected value of the $j^{th}$ neuron for the $\mu^{th}$ input record  
 $\hat{y}\_{j,\mu}= $ current (calculated) value of the $j^{th}$ neuron for the $\mu^{th}$ input record  
-$h_{j,\mu}=$ value of the $h$ for the $j^{th}$ neuron for the $\mu^{th}$ input record  
+$h_{j,\mu}=$ value of $h$ for the $j^{th}$ neuron for the $\mu^{th}$ input record  
 $w_{j,i} =$ the weight between the $j^{th}$ output neuron and the $i^{th}$ input (to that neuron).  
 $x_{i, \mu}=$ the $i^{th}$ input in the $\mu^{th}$ input record  
 
