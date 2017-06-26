@@ -162,3 +162,28 @@ $$
 f'(h_{j,\mu}) \cdot
 x_{b, \mu}
 $$
+
+Let ...
+
+$$
+\delta=
+\frac{1}{mn}  
+\sum_{\mu=1}^{m} 
+\sum_{j=1}^{n}
+(y_{j,\mu} - f(h_{j,\mu} )) \cdot 
+f'(h_{j,\mu})
+$$
+
+
+
+$$=
+\frac{1}{mn}  
+\sum_{\mu=1}^{m} 
+\sum_{j=1}^{n}
+(y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})) \cdot 
+f'(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})
+$$
+
+Once we have $\delta$ we can calculate each individual $\Delta w$ with it.
+
+
