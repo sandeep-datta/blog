@@ -52,7 +52,7 @@ $x_{i, \mu}=$ the $i^{th}$ input in the $\mu^{th}$ input record
 	* Hence MSE can now be viewed as a function of all the weights.
 
 $$
-C(\vec{W}) = MSE(w_{1,1}, w_{1,2}, ..., w_{1,m}, w_{2,1}, w_{2,2}, ..., w_{2,m},  ..., w_{n,m})=\\\frac{1}{2mn} \sum_{\mu=1}^{m} \sum_{j=1}^{n}(y_{j\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}))^{2}
+C(\vec{W}) = MSE(w_{1,1}, w_{1,2}, ..., w_{1,m}, w_{2,1}, w_{2,2}, ..., w_{2,m},  ..., w_{n,m})=\\\frac{1}{2mn} \sum_{\mu=1}^{m} \sum_{j=1}^{n}(y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}))^{2}
 $$
 
 So in the above equation everything is a constant except for the weights which are free variables.
@@ -75,3 +75,26 @@ $$
 ...,
 \frac{\partial C(\vec{W})}{\partial w_{n,m}}=0,
 $$
+
+#### Gradient w.r.t. arbitrary weight $w_{x,y}$
+$$
+\frac{\partial C(\vec{W})}{\partial w_{x,y}} =
+\frac{\partial \left (\frac{1}{2mn}  
+\sum_{\mu=1}^{m} 
+\sum_{j=1}^{n}
+(y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}))^{2}
+\right )}{\partial w_{x,y}}
+$$
+
+$$
+=
+\frac{1}{2mn}  
+\sum_{\mu=1}^{m} 
+\sum_{j=1}^{n}
+\frac{\partial \left (
+(y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}))^{2}
+\right )}{\partial w_{x,y}}
+$$
+
+#### Chain rule (of differentiation)
+
