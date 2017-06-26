@@ -22,9 +22,9 @@ $m = $ number of records in the training data.
 
 ### MSE for $n$ output neurons and $m$ input records
 
-\begin{equation}
+$$
   MSE = \frac{1}{2mn} \sum_{\mu=1}^{m} \sum_{j=1}^{n}(y_{j\mu} - \hat{y_{j\mu}})^{2}
-\end{equation}
+$$
 
 Where...
 $j = j^{th}$ output neuron 
