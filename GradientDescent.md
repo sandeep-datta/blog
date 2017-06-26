@@ -1,6 +1,6 @@
 ---
-title:"Understanding Gradient Descent"
-use_math:true
+title: "Understanding Gradient Descent"
+use_math: true
 ---
 
 
