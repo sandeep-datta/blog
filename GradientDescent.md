@@ -184,6 +184,12 @@ $$=
 f'(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})
 $$
 
+
+
+$$
+\Rightarrow \frac{\partial C(\vec{W})}{\partial w_{a,b}}=\delta \cdot x_{b,\mu}
+$$
+
 Once we have $\delta$ we can calculate all individual $\Delta w$ with it without recomputing $\delta$ each time.
 
 ### Calculating $\Delta w$
@@ -205,3 +211,14 @@ $$
 Where ...
 
 $\eta =$ constant of proportionality = the learning rate.
+
+After substitution ...
+
+$$
+\Delta w_{a,b} = -\eta \cdot \delta \cdot x_{b,\mu}
+$$
+
+Where ...
+
+$x_{b,\mu}=b^{th}$ (input) value in the $\mu^{th}$ input record.
+
