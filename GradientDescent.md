@@ -76,25 +76,42 @@ $$
 \frac{\partial C(\vec{W})}{\partial w_{n,m}}=0,
 $$
 
-#### Gradient w.r.t. arbitrary weight $w_{x,y}$
+#### Gradient w.r.t. arbitrary weight $w_{a,b}$
 $$
-\frac{\partial C(\vec{W})}{\partial w_{x,y}} =
+\frac{\partial C(\vec{W})}{\partial w_{a,b}} =
 \frac{\partial \left (\frac{1}{2mn}  
 \sum_{\mu=1}^{m} 
 \sum_{j=1}^{n}
 (y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}))^{2}
-\right )}{\partial w_{x,y}}
+\right )}{\partial w_{a,b}}
 $$
 
-$$
-\=
+$$=
 \frac{1}{2mn}  
 \sum_{\mu=1}^{m} 
 \sum_{j=1}^{n}
 \frac{\partial \left (
 (y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}))^{2}
-\right )}{\partial w_{x,y}}
+\right )}{\partial w_{a,b}}
 $$
 
-#### Chain rule (of differentiation)
+#### Using chain rule (of differentiation)
+$$
+\frac{\partial C(\vec{W})}{\partial w_{a,b}} =
+\frac{1}{2mn}  
+\sum_{\mu=1}^{m} 
+\sum_{j=1}^{n}
+2 \cdot 
+(y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})) \cdot 
+\frac{\partial f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}\\=
+\frac{1}{2mn}  
+\sum_{\mu=1}^{m} 
+\sum_{j=1}^{n}
+2 \cdot (y_{j,\mu} - f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})) \cdot \sum_{i=1}^{q} \frac{\partial f( w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
+$$
+
+##### Using chain rule again
+
+
+
 
