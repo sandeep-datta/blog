@@ -106,7 +106,7 @@ $$
 \frac{\partial f(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
 $$
 
-Now using chain rule again ...
+Using chain rule again ...
 
 $$=
 \frac{1}{2mn}  
@@ -128,6 +128,9 @@ f'(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}) \cdot
 \sum_{i=1}^{q}
 \frac{\partial (w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
 $$
+
+
+
 
 
 
