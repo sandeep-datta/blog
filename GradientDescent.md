@@ -129,8 +129,25 @@ f'(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}) \cdot
 \frac{\partial (w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
 $$
 
+Since $$h_{j,\mu} = \sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu}$$ we have ...
 
+$$=
+\frac{1}{2mn}  
+\sum_{\mu=1}^{m} 
+\sum_{j=1}^{n}
+2 \cdot 
+(y_{j,\mu} - f(h_{j,\mu} )) \cdot 
+f'(h_{j,\mu}) \cdot
+\sum_{i=1}^{q}
+\frac{\partial (w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}
+$$
 
+Simplifying the last summation ...
+$$
+\sum_{i=1}^{q}
+\frac{\partial (w_{j,i} \cdot x_{i, \mu})}{\partial w_{a,b}}=
+x_{i, \mu}
+$$
 
-
+Since for all $j \neq a$ and $i \neq b$ the partial differentiation in the above equation is zero.
 
