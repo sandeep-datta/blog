@@ -184,6 +184,4 @@ $$=
 f'(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})
 $$
 
-Once we have $\delta$ we can calculate each individual $\Delta w$ with it.
-
-
+Once we have $\delta$ we can calculate all individual $\Delta w$ with it without recomputing $\delta$ each time.
