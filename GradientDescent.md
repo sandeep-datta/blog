@@ -185,3 +185,23 @@ f'(\sum_{i=1}^{q} w_{j,i} \cdot x_{i, \mu})
 $$
 
 Once we have $\delta$ we can calculate all individual $\Delta w$ with it without recomputing $\delta$ each time.
+
+### Calculating $\Delta w$
+
+$$
+\Delta w_{a,b} \propto -\frac{\partial C(\vec{W})}{\partial w_{a,b}}
+$$
+
+Where ...
+
+$w_{a,b}=$ the weight connected between the $a^{th}$ output neuron and the $b^{th}$ input.
+
+Therefore ... 
+
+$$
+\Delta w_{a,b} = -\eta \frac{\partial C(\vec{W})}{\partial w_{a,b}}
+$$
+
+Where ...
+
+$\eta =$ constant of proportionality = the learning rate.
