@@ -77,6 +77,7 @@ $$
 $$
 
 #### Gradient w.r.t. arbitrary weight $w_{a,b}$
+
 $$
 \frac{\partial C(\vec{W})}{\partial w_{a,b}} =
 \frac{\partial \left (\frac{1}{2mn}  
@@ -86,8 +87,7 @@ $$
 \right )}{\partial w_{a,b}}
 $$
 
-$$
-\frac{\partial C(\vec{W})}{\partial w_{a,b}}=
+$$=
 \frac{1}{2mn}  
 \sum_{\mu=1}^{m} 
 \sum_{j=1}^{n}
