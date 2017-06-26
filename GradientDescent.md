@@ -14,10 +14,10 @@ $$
 
 Where...
 
-$\mu =$ index into the training data set with $\mu^{th}$ record : $\langle \vec{X_\mu}, y_\mu \rangle$.
-$\vec{X_\mu} = \mu^{th}$input record.
-$y_\mu = \mu^{th}$output record.
-$m = $ number of records in the training data.
+$\mu =$ index into the training data set with $\mu^{th}$ record : $\langle \vec{X_\mu}, y_\mu \rangle$.  
+$\vec{X_\mu} = \mu^{th}$input record.  
+$y_\mu = \mu^{th}$output record.  
+$m = $ number of records in the training data.  
 
 ### MSE for $n$ output neurons and $m$ input records
 
