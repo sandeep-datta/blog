@@ -9,11 +9,11 @@ use_math: true
 
 ### MSE for a single output neuron and $m$ input records
 
-
+$$
 \begin{align}
   MSE_y = \frac{1}{2m} \sum_{\mu=1}^{m} (y_\mu - \hat{y_\mu})^{2}
 \end{align}
-
+$$
 
 Where...
 
